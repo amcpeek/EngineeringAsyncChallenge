@@ -31,7 +31,13 @@
   color: white;
 } */
 
-.b-red {
+html {
+  display: flex;
+}
+
+
+
+/* .b-red {
   border: 0.1em red solid;
 }
 
@@ -45,7 +51,7 @@
 
 .b-blue {
   border: 0.1em blue solid;
-}
+} */
 
 .row {
   display: flex;
@@ -62,4 +68,217 @@
   justify-content: center;
   text-align: center;
 
+}
+
+.logo {
+  width: 7em;
+  height: 7em;
+}
+
+
+.jc-start {
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.margin-10-vw {
+  margin: 10vw;
+}
+
+.margin-10-vw-lr {
+  margin-left: 10vw;
+  margin-right: 10vw;
+
+
+}
+
+
+.font-5em {
+  font-size: 5em;
+}
+
+.font-2-4em {
+  font-size: 2.4em;
+}
+
+.hero-background {
+  background: url("./media/hero.png") no-repeat;
+  background-color: rgba(10, 55, 232, 0.6);
+  background-size: 100%;
+  background-blend-mode: multiply;
+
+  /* overflow: hidden; */
+  /* background-color: blue;
+  opacity: .4; */
+  /* filter: sepia(100%) saturate(200%) brightness(70%) hue-rotate(560deg); */
+  /* background-image:
+  linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ),
+  url("./media/hero.png") */
+}
+
+
+
+.reg-button {
+  background-color: rgb(48, 48, 235);
+  color: white;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 2em;
+  border: none;
+}
+
+
+.coach-background {
+  background: url("./media/coaching.png") no-repeat;
+  background-size: 100%;
+  width: 60vw;
+  height: 80vh;
+  margin: 0;
+}
+
+
+.currentCoachesTitle {
+  color: blue;
+  font-size: 4em;
+  padding-top: 0.5em;
+   padding-bottom: 0.5em;
+
+}
+
+.currentCoachesRight {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.table-container {
+  /* border: purple solid 0.2em; */
+
+  width: 32em;
+  height: 20em;
+  border-radius: 1em;
+  flex-flow: wrap;
+  padding: 1em;
+}
+
+
+.table-headers {
+  display: flex;
+  /* border: purple solid 0.2em; */
+  justify-content: space-between;
+  height: 4em;
+  align-items: center;
+}
+
+.table-row {
+  display: flex;
+  /* border: rgb(0, 128, 96) solid 0.2em; */
+  justify-content: space-between;
+  padding-top: 1em;
+  padding-bottom:1em;
+  border-top: darkgray 0.1em solid;
+
+}
+
+.trow {
+  display: flex;
+  /* border: rgb(62, 128, 0) solid 0.2em; */
+  width: 6em;
+
+}
+
+.trow-m {
+  display: flex;
+  /* border: rgb(62, 128, 0) solid 0.2em; */
+  width: 5em;
+  justify-content: center;
+
+}
+
+.trow-e {
+  display: flex;
+  /* border: rgb(62, 128, 0) solid 0.2em; */
+  width: 10em;
+
+}
+
+.join-mailing {
+   color: white;
+  font-size: 4em;
+  padding-top: 0.5em;
+   padding-bottom: 0.5em;
+}
+
+.classroom-background {
+  background: url("./media/mailinglist.png") no-repeat;
+  background-color: rgba(10, 55, 232, 0.6);
+  background-size: 100%;
+  background-blend-mode: multiply;
+
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.join-right {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  width: 36vw;
+}
+
+.join-text {
+  color: black;
+  font-size: 3em;
+  padding-top: 0.5em;
+   padding-bottom: 0.5em;
+
+}
+
+.white {
+  color: white;
+}
+
+
+.background-gray {
+  background-color: rgba(177, 175, 175, 0.7);
+  width: 80vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.outer-gray {
+  display: flex;
+  justify-content: center;
+    /* border: rgb(128, 0, 0) solid 0.2em; */
+    width: 100vw;
+
+}
+
+.outer-form {
+  width: 40vw;
+}
+
+
+.bottom-info {
+  margin-top: 5em;
+  margin-bottom: 5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+.font-larger {
+  font-size: 1.5em;
 }
