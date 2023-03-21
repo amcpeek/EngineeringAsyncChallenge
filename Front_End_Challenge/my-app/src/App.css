@@ -280,3 +280,8 @@ html {
 .no-cursor {
   cursor: not-allowed;
 }
+
+.black-bar {
+  height: 1em;
+  background-color: rgb(47, 45, 45);
+}

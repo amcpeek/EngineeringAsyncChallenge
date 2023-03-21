@@ -5,16 +5,33 @@ const Form = () => {
     e.preventDefault();
     const newUser = { name, email, industry };
     console.log(newUser);
+    setShowForm(false)
   };
 
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [industry, setIndustry] = useState<string>("E-Sports");
+  const [showForm, setShowForm] = useState<boolean>(true)
   const allIndustries: string[] = [
     "E-Sports",
     "Spots/Fitness",
     "Professional Services",
   ];
+  if(!showForm) {
+    return (
+        <div className='center classroom-background'>
+            {name &&  email && industry  && (
+                <div className="join-mailing">
+                    Thank you {name}&nbsp;
+                    for signing up for our mailing list </div>
+
+            )}
+
+
+
+        </div>
+    )
+  }
   return (
     <div>
       <div className="b-green center classroom-background">

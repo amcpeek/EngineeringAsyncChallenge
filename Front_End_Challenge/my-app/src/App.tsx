@@ -25,6 +25,7 @@ const App: React.FC = () => {
           <button className="reg-button no-cursor">Register Now</button>
         </div>
       </div>
+      <div className='black-bar'></div>
 
       <div className="b-orange row center ">
         <div className="b-green coach-background"></div>
@@ -57,6 +58,7 @@ const App: React.FC = () => {
           </div>
         </div>
       </div>
+      <div className='black-bar'></div>
       <Form />
 
       <div className="b-blue row center bottom-info">
