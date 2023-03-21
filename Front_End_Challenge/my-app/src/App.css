@@ -1,10 +1,6 @@
-
-
 html {
   display: flex;
 }
-
-
 
 /* .b-red {
   border: 0.1em red solid;
@@ -36,14 +32,12 @@ html {
   display: flex;
   justify-content: center;
   text-align: center;
-
 }
 
 .logo {
   width: 7em;
   height: 7em;
 }
-
 
 .jc-start {
   display: flex;
@@ -61,7 +55,6 @@ html {
 .margin-10-vw-lr {
   margin-left: 10vw;
   margin-right: 10vw;
-
 }
 
 .outer-reg-button {
@@ -70,9 +63,7 @@ html {
   margin-bottom: 0;
   margin-top: 2em;
   display: flex;
-
 }
-
 
 .font-5em {
   font-size: 4em;
@@ -94,8 +85,6 @@ html {
   justify-content: flex-end;
 }
 
-
-
 .reg-button {
   background-color: rgb(48, 48, 235);
   color: white;
@@ -107,7 +96,6 @@ html {
   border: none;
 }
 
-
 .coach-background {
   background: url("./media/coaching.png") no-repeat;
   background-size: 100%;
@@ -116,13 +104,11 @@ html {
   margin: 0;
 }
 
-
 .currentCoachesTitle {
   color: blue;
   font-size: 4em;
   padding-top: 0.5em;
-   padding-bottom: 0.5em;
-
+  padding-bottom: 0.5em;
 }
 
 .currentCoachesRight {
@@ -131,7 +117,6 @@ html {
   flex-direction: column;
   align-items: center;
 }
-
 
 .table-container {
   /* border: purple solid 0.2em; */
@@ -143,13 +128,13 @@ html {
   padding: 1em;
 }
 
-
 .table-headers {
   display: flex;
   /* border: purple solid 0.2em; */
   justify-content: space-between;
   height: 4em;
   align-items: center;
+  font-weight: 700;
 }
 
 .table-row {
@@ -157,16 +142,14 @@ html {
   /* border: rgb(0, 128, 96) solid 0.2em; */
   justify-content: space-between;
   padding-top: 1em;
-  padding-bottom:1em;
+  padding-bottom: 1em;
   border-top: darkgray 0.1em solid;
-
 }
 
 .trow {
   display: flex;
   /* border: rgb(62, 128, 0) solid 0.2em; */
-  width: 6em;
-
+  width: 7em;
 }
 
 .trow-m {
@@ -174,21 +157,19 @@ html {
   /* border: rgb(62, 128, 0) solid 0.2em; */
   width: 5em;
   justify-content: center;
-
 }
 
 .trow-e {
   display: flex;
   /* border: rgb(62, 128, 0) solid 0.2em; */
   width: 10em;
-
 }
 
 .join-mailing {
-   color: white;
+  color: white;
   font-size: 4em;
   padding-top: 0.5em;
-   padding-bottom: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .classroom-background {
@@ -200,7 +181,6 @@ html {
   height: 80vh;
   display: flex;
   flex-direction: column;
-
 }
 
 .join-right {
@@ -214,14 +194,12 @@ html {
   color: black;
   font-size: 3em;
   padding-top: 0.5em;
-   padding-bottom: 0.5em;
-
+  padding-bottom: 0.5em;
 }
 
 .white {
   color: white;
 }
-
 
 .background-gray {
   background-color: rgba(177, 175, 175, 0.7);
@@ -232,19 +210,16 @@ html {
   align-items: center;
 }
 
-
 .outer-gray {
   display: flex;
   justify-content: center;
-    /* border: rgb(128, 0, 0) solid 0.2em; */
-    width: 100vw;
-
+  /* border: rgb(128, 0, 0) solid 0.2em; */
+  width: 100vw;
 }
 
 .outer-form {
   width: 40vw;
 }
-
 
 .bottom-info {
   margin-top: 5em;
@@ -258,4 +233,50 @@ html {
 
 .font-larger {
   font-size: 1.5em;
+}
+
+.form-format {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 20em;
+  /* border: red solid 0.1em; */
+}
+
+.form-format > div,
+.form-format > label > input,
+.form-format > label > select,
+.form-format > button {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* border: rgb(0, 229, 255) solid 0.1em; */
+}
+
+.form-format > div {
+  margin-top: 10px;
+  color: black;
+  width: 300px;
+}
+
+.form-format > label > input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: black;
+  width: 320px;
+  height: 35px;
+}
+
+.form-format > label > select {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: black;
+  width: 330px;
+  height: 40px;
+}
+
+.no-cursor {
+  cursor: not-allowed;
 }
