@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="center column">
       <div className="b-blue hero-background">
-        <div className="b-red column jc-start margin-10-vw">
+        <div className="b-red column jc-start better-lesson-title">
           <img
             src={BL_LogoBasic}
             alt="Better Lesson Logo"
@@ -17,7 +17,7 @@ function App() {
           <h1 className='font-5em white'>BetterLesson <br/> Professional Coaching</h1>
           <div className='font-2-4em white'>PROFESSIONAL COACH SEMINARS & MENTORSHIP</div>
         </div>
-        <div className="b-orange margin-10-vw-lr jc-start">
+        <div className="outer-reg-button">
           <button className='reg-button'>Register Now</button>
         </div>
       </div>
