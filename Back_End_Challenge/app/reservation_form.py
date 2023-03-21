@@ -38,24 +38,29 @@ class ReservationForm(FlaskForm):
                 return False
             allReservations = Reservation.query.all()
             for res in allReservations:
+
                 oneRes = res.to_dict()
                 oneResStartString = str(oneRes['startTime'])
                 #should convert to local time, then compared to time the user submitted in their local time
                 compareStartTime = datetime.strptime(oneResStartString,"%Y-%m-%dT%H:%M:%SZ")
                 oneResEndString = str(oneRes['endTime'])
                 compareEndTime = datetime.strptime(oneResEndString,"%Y-%m-%dT%H:%M:%SZ")
-                if startTime <= compareStartTime and endTime >= compareEndTime:
-                    self.endTime.errors.append('This user already has an event completely overlapping with the specified time block')
-                    return False
-                if startTime > compareStartTime and endTime < compareEndTime:
-                    self.endTime.errors.append('This user already has an event that starts before and continues to after this time block')
-                    return False
-                if startTime <= compareStartTime and endTime > compareStartTime:
-                    self.endTime.errors.append('This user already has an event overlapping with the start time, but not the end time')
-                    return False
-                if endTime >= compareEndTime and startTime > compareEndTime:
-                    self.endTime.errors.append('This user already has an event overlapping with the end time, but not the start time')
-                    return False
+
+                compareUser = oneRes['user']
+                print('compareUser', compareUser, 'self.user', self.user.data)
+                if compareUser == self.user.data:
+                    if startTime <= compareStartTime and endTime >= compareEndTime:
+                        self.endTime.errors.append('This user already has an event completely overlapping with the specified time block')
+                        return False
+                    if startTime > compareStartTime and endTime < compareEndTime:
+                        self.endTime.errors.append('This user already has an event that starts before and continues to after this time block')
+                        return False
+                    if startTime <= compareStartTime and endTime > compareStartTime:
+                        self.endTime.errors.append('This user already has an event overlapping with the start time, but not the end time')
+                        return False
+                    if endTime >= compareEndTime and startTime > compareEndTime:
+                        self.endTime.errors.append('This user already has an event overlapping with the end time, but not the start time')
+                        return False
 
             return True
         return False
