@@ -1,4 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 
 db = SQLAlchemy()
 
@@ -13,10 +14,10 @@ class Reservation(db.Model):
     endTime = db.Column(db.String(255))
 
     def to_dict(self):
-      return {
-        'id': self.id,
-        'user':self.user,
-        'event': self.event,
-        'startTime': self.startTime,
-        'endTime': self.endTime
-      }
+        return {
+            'id': self.id,
+            'user':self.user,
+            'event': self.event,
+            'startTime': self.startTime,
+            'endTime': self.endTime
+        }
