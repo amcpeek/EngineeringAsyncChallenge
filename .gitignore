@@ -5,3 +5,29 @@
 ./Back_End_Challenge/.DS_Store
 ./Back_End_Challenge/.vscode/
 ./Back_End_Challenge/dev.db
+
+./Database_Challenge/dev.db
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+./Front_End_Challenge/node_modules
+./Front_End_Challenge/.pnp
+./Front_End_Challenge/.pnp.js
+
+# testing
+./Front_End_Challenge/coverage
+
+# production
+./Front_End_Challenge/build
+
+# misc
+./Front_End_Challenge/.DS_Store
+./Front_End_Challenge/.env.local
+./Front_End_Challenge/.env.development.local
+./Front_End_Challenge/.env.test.local
+./Front_End_Challenge/.env.production.local
+
+./Front_End_Challenge/npm-debug.log*
+./Front_End_Challenge/yarn-debug.log*
+./Front_End_Challenge/yarn-error.log*
