@@ -1,0 +1,7 @@
+./Back_End_Challenge/.env
+./Back_End_Challenge/__pycache__/
+./Back_End_Challenge/*.py[cod]
+./Back_End_Challenge/.venv
+./Back_End_Challenge/.DS_Store
+./Back_End_Challenge/.vscode/
+./Back_End_Challenge/dev.db

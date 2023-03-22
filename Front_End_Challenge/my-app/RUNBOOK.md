@@ -2,8 +2,13 @@
 
 # Instructions:
 
-- I ran the following command in the terminal to download the React for Typescript package:
-- npx create-react-app my-app --template typescript
+* I ran the following command in the terminal to download the React for Typescript package:
+* npx create-react-app my-app --template typescript
+## To Start:
+* In the terminal:
+* npm install
+* npm start
+
 
 # Notes:
 
