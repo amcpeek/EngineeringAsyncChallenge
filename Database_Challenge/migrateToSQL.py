@@ -11,21 +11,22 @@ import json
 #     email VARCHAR(100),
 #     address VARCHAR(255),
 #     orderTotal VARCHAR(255),
+#     orderDate VARCHAR(255),
 #     discountCode VARCHAR(255)
 # );
-# note: I decided to keep the cellphone and orderTotal varchar
+
 
 # CREATE TABLE coaching_services (
 #     id INT AUTO_INCREMENT PRIMARY KEY,
 #     type VARCHAR(255)
 # );
-# note: type was not included in the data given, but I included it to make it easier to conceptualize
+
 
 # CREATE TABLE book_sets (
 #     id INT AUTO_INCREMENT PRIMARY KEY,
 #     name VARCHAR(255)
 # );
-# note: name was not included in the data given, but I included it to make it easier to conceptualize
+
 
 # CREATE TABLE service_orders (
 #     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -39,6 +40,10 @@ import json
 #     orderUUID VARCHAR(255),
 #     bookSetId INT
 # );
+
+# note: I decided to keep the cellphone and orderTotal varchar
+# note: type was not included in the data given for coaching_services, but I included it to make it easier to conceptualize
+# note: name was not included in the data given for book_sets, but I included it to make it easier to conceptualize
 
 
 # 2. insert into tables
@@ -66,8 +71,24 @@ with open('data.json', 'r') as f:
             for n in jd['bookSetID']:
                 # insert into book_sets
                 # assume database is set up with auto-incrementing ids
-                print(f'INSERT INTO book_set (id) VALUES ({n});')
+                print(f'INSERT INTO book_sets (id) VALUES ({n});')
                 # insert into book_orders
                 # assume database is set up with auto-incrementing ids
                 print(
-                    f'''INSERT INTO service_orders (orderUUID, bookSetId) VALUES ( '{jd["UUID"]}', {n});''')
+                    f'''INSERT INTO book_orders (orderUUID, bookSetId) VALUES ( '{jd["UUID"]}', {n});''')
+
+
+# 3. confirm relationships with with a select statements:
+
+# SELECT book_sets.*
+# FROM book_sets
+# INNER JOIN book_orders ON book_sets.id = book_orders.bookSetId
+# INNER JOIN orders ON book_orders.orderUUID = orders.UUID
+# WHERE orders.UUID = 'ccdc0cbd-44a4-4b1b-b182-d45d727d823a';
+
+
+# SELECT coaching_services.*
+# FROM coaching_services
+# INNER JOIN service_orders ON coaching_services.id = service_orders.coachingServiceId
+# INNER JOIN orders ON service_orders.orderUUID = orders.UUID
+# WHERE orders.UUID = 'ccdc0cbd-44a4-4b1b-b182-d45d727d823a';
