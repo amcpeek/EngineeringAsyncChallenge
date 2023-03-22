@@ -2,7 +2,9 @@
 
 import json
 
-# 1. create tables in the database
+# 1. Test locally by typing sqlite3 dev.db in the command line
+
+# 2. create tables in the database
 
 # CREATE TABLE orders (
 #     UUID VARCHAR(255) PRIMARY KEY,
@@ -46,7 +48,7 @@ import json
 # note: name was not included in the data given for book_sets, but I included it to make it easier to conceptualize
 
 
-# 2. insert into tables
+# 3. insert into tables
 
 with open('data.json', 'r') as f:
     json_data = json.load(f)
@@ -78,7 +80,7 @@ with open('data.json', 'r') as f:
                     f'''INSERT INTO book_orders (orderUUID, bookSetId) VALUES ( '{jd["UUID"]}', {n});''')
 
 
-# 3. confirm relationships with with a select statements:
+# 4. confirm relationships with with a select statements:
 
 # SELECT book_sets.*
 # FROM book_sets
