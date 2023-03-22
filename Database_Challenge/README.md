@@ -2,4 +2,4 @@
 
 ## New Relational Data Model Visual
 
-![New Relational Data Model Visual](NewDatabaseSchemaOrders.png)
+![New Relational Data Model Visual](OrdersNewDatabaseSchema.png)
