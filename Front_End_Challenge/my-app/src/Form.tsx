@@ -98,7 +98,7 @@ const Form = () => {
                 </div>
                 <div className="">
                   <button className="reg-button" type="submit">
-                    Sign Up Fix
+                    Sign Up
                   </button>
                 </div>
               </div>

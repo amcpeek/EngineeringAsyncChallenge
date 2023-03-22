@@ -1,4 +1,4 @@
-# Database_Challenge
+# Database Challenge
 * For this challenge, nothing additional needed to be installed
 * To run it, in the terminal write "python migrateToSQL.py"
 * I included the instructions of what the directions would be to set up the database prior to entering data into it in the top of the file
