@@ -7,14 +7,14 @@ import Form from "./Form";
 const App: React.FC = () => {
   return (
     <div className="center column">
-      <div className="b-blue hero-background">
-        <div className="b-red column jc-start better-lesson-title">
+      <div className="hero-background">
+        <div className="better-lesson-title">
           <img
             src={BL_LogoBasic}
             alt="Better Lesson Logo"
             className="logo"
           ></img>
-          <h1 className="font-5em white">
+          <h1 className="font-4em white">
             BetterLesson <br /> Professional Coaching
           </h1>
           <div className="font-2-4em white">
@@ -25,12 +25,12 @@ const App: React.FC = () => {
           <button className="reg-button no-cursor">Register Now</button>
         </div>
       </div>
-      <div className='black-bar'></div>
+      <div className="black-bar"></div>
 
-      <div className="b-orange row center ">
-        <div className="b-green coach-background"></div>
-        <div className="b-blue currentCoachesRight">
-          <div className="currentCoachesTitle b-green">Current Coaches</div>
+      <div className="row center">
+        <div className="coach-background"></div>
+        <div className="currentCoachesRight">
+          <div className="currentCoachesTitle">Current Coaches</div>
 
           <div className="table-container">
             <div className="table-headers">
@@ -58,10 +58,10 @@ const App: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className='black-bar'></div>
+      <div className="black-bar"></div>
       <Form />
 
-      <div className="b-blue row center bottom-info">
+      <div className="bottom-info">
         <div>
           <div className="font-larger">EMAIL ADDRESS</div>
           <div>hello@reallygreatsite.com</div>

@@ -1,22 +1,8 @@
+/* FOR USE EVERYWHERE */
+
 html {
   display: flex;
 }
-
-/* .b-red {
-  border: 0.1em red solid;
-}
-
-.b-orange {
-  border: 0.1em orange solid;
-}
-
-.b-green {
-  border: 0.1em green solid;
-}
-
-.b-blue {
-  border: 0.1em blue solid;
-} */
 
 .row {
   display: flex;
@@ -34,15 +20,37 @@ html {
   text-align: center;
 }
 
-.logo {
-  width: 7em;
-  height: 7em;
-}
-
 .jc-start {
   display: flex;
   justify-content: flex-start;
   text-align: left;
+}
+
+.margin-10-vw-lr {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.font-4em {
+  font-size: 4em;
+}
+
+.font-2-4em {
+  font-size: 2.4em;
+}
+
+.white {
+  color: white;
+}
+
+.no-cursor {
+  cursor: not-allowed;
+}
+
+/* FOR SINGLE TYPE USE */
+.logo {
+  width: 7em;
+  height: 7em;
 }
 
 .better-lesson-title {
@@ -50,11 +58,10 @@ html {
   margin-left: 8em;
   margin-right: 8em;
   margin-bottom: 6em;
-}
-
-.margin-10-vw-lr {
-  margin-left: 10vw;
-  margin-right: 10vw;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  flex-direction: column;
 }
 
 .outer-reg-button {
@@ -63,14 +70,6 @@ html {
   margin-bottom: 0;
   margin-top: 2em;
   display: flex;
-}
-
-.font-5em {
-  font-size: 4em;
-}
-
-.font-2-4em {
-  font-size: 2.4em;
 }
 
 .hero-background {
@@ -120,8 +119,6 @@ html {
 
 .table-container {
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
-
-
   width: 32em;
   height: 20em;
   border-radius: 1em;
@@ -131,7 +128,6 @@ html {
 
 .table-headers {
   display: flex;
-  /* border: purple solid 0.2em; */
   justify-content: space-between;
   height: 4em;
   align-items: center;
@@ -140,7 +136,6 @@ html {
 
 .table-row {
   display: flex;
-  /* border: rgb(0, 128, 96) solid 0.2em; */
   justify-content: space-between;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -149,20 +144,17 @@ html {
 
 .trow {
   display: flex;
-  /* border: rgb(62, 128, 0) solid 0.2em; */
   width: 7em;
 }
 
 .trow-m {
   display: flex;
-  /* border: rgb(62, 128, 0) solid 0.2em; */
   width: 5em;
   justify-content: center;
 }
 
 .trow-e {
   display: flex;
-  /* border: rgb(62, 128, 0) solid 0.2em; */
   width: 10em;
 }
 
@@ -178,10 +170,10 @@ html {
   background-color: rgba(10, 55, 232, 0.6);
   background-size: 100%;
   background-blend-mode: multiply;
-
   height: 80vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .join-right {
@@ -189,6 +181,7 @@ html {
   display: flex;
   flex-direction: column;
   width: 36vw;
+  justify-content: center;
 }
 
 .join-text {
@@ -198,16 +191,10 @@ html {
   padding-bottom: 0.5em;
 }
 
-@media(max-width: 1130px) {
+@media (max-width: 1130px) {
   .join-text {
     font-size: 2em;
   }
-}
-
-
-
-.white {
-  color: white;
 }
 
 .background-gray {
@@ -217,12 +204,12 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
 
 .outer-gray {
   display: flex;
   justify-content: center;
-  /* border: rgb(128, 0, 0) solid 0.2em; */
   width: 100vw;
 }
 
@@ -238,6 +225,7 @@ html {
   justify-content: space-evenly;
   margin-left: 3em;
   margin-right: 3em;
+  text-align: center;
 }
 
 .font-larger {
@@ -250,7 +238,6 @@ html {
   justify-content: flex-start;
   align-items: flex-start;
   width: 20em;
-  /* border: red solid 0.1em; */
 }
 
 .form-format > div,
@@ -261,7 +248,6 @@ html {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  /* border: rgb(0, 229, 255) solid 0.1em; */
 }
 
 .form-format > div {
@@ -284,10 +270,6 @@ html {
   color: black;
   width: 330px;
   height: 40px;
-}
-
-.no-cursor {
-  cursor: not-allowed;
 }
 
 .black-bar {

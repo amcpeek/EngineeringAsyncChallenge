@@ -55,19 +55,19 @@ with open('data.json', 'r') as f:
         if 'coachingServiceID' in jd:
             for n in jd['coachingServiceID']:
                 # insert into coaching_services
-                #assume database is set up with autoincrementing ids
+                # assume database is set up with auto-incrementing ids
                 print(f'INSERT INTO coaching_services (id) VALUES ({n});')
                 # insert into service_orders
-                #assume database is set up with autoincrementing ids
+                # assume database is set up with auto-incrementing ids
                 print(
                     f'''INSERT INTO service_orders (orderUUID, coachingServiceId) VALUES ('{jd["UUID"]}', {n});''')
 
         if 'bookSetID' in jd:
             for n in jd['bookSetID']:
                 # insert into book_sets
-                #assume database is set up with autoincrementing ids
+                # assume database is set up with auto-incrementing ids
                 print(f'INSERT INTO book_set (id) VALUES ({n});')
                 # insert into book_orders
-                #assume database is set up with autoincrementing ids
+                # assume database is set up with auto-incrementing ids
                 print(
                     f'''INSERT INTO service_orders (orderUUID, bookSetId) VALUES ( '{jd["UUID"]}', {n});''')

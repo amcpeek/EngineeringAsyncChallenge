@@ -16,7 +16,7 @@ class Reservation(db.Model):
     def to_dict(self):
         return {
             'id': self.id,
-            'user':self.user,
+            'user': self.user,
             'event': self.event,
             'startTime': self.startTime,
             'endTime': self.endTime

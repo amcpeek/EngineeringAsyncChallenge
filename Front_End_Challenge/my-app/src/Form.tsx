@@ -5,43 +5,39 @@ const Form = () => {
     e.preventDefault();
     const newUser = { name, email, industry };
     console.log(newUser);
-    setShowForm(false)
+    setShowForm(false);
   };
 
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [industry, setIndustry] = useState<string>("E-Sports");
-  const [showForm, setShowForm] = useState<boolean>(true)
+  const [showForm, setShowForm] = useState<boolean>(true);
   const allIndustries: string[] = [
     "E-Sports",
     "Spots/Fitness",
     "Professional Services",
   ];
-  if(!showForm) {
+  if (!showForm) {
     return (
-        <div className='center classroom-background'>
-            {name &&  email && industry  && (
-                <div className="join-mailing">
-                    Thank you {name}&nbsp;
-                    for signing up for our mailing list </div>
-
-            )}
-
-
-
-        </div>
-    )
+      <div className="center classroom-background">
+        {name && email && industry && (
+          <div className="join-mailing">
+            Thank you {name}&nbsp; for signing up for our mailing list{" "}
+          </div>
+        )}
+      </div>
+    );
   }
   return (
     <div>
-      <div className="b-green center classroom-background">
+      <div className="classroom-background">
         <div className="join-mailing">Join our mailing list</div>
         <div className="outer-gray">
           <form onSubmit={handleSubmit}>
-            <div className="b-red row background-gray">
-              <div className="b-orange outer-form">
+            <div className="background-gray">
+              <div className="outer-form">
                 <div className="form-format">
-                  <div className="purple">Full Name</div>
+                  <div>Full Name</div>
                   <label>
                     <input
                       type="text"
@@ -91,12 +87,12 @@ const Form = () => {
                 </div>
               </div>
 
-              <div className="b-green center join-right">
+              <div className="join-right">
                 <div className="join-text">
                   Join our mailing to receive notifications about program
                   availability and special discounts
                 </div>
-                <div className="">
+                <div>
                   <button className="reg-button" type="submit">
                     Sign Up
                   </button>
