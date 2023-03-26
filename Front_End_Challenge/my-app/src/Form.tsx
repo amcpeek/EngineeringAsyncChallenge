@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Form = () => {
+const Form: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const newUser = { name, email, industry };
@@ -76,10 +76,9 @@ const Form = () => {
                         setIndustry(event.target.value);
                       }}
                     >
-                      {allIndustries.map((state) => (
-                        <option key={state} value={state}>
-                          {" "}
-                          {state}
+                      {allIndustries.map((industry) => (
+                        <option key={industry} value={industry}>
+                          {industry}
                         </option>
                       ))}
                     </select>
