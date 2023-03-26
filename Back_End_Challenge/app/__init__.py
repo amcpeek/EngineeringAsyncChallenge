@@ -6,6 +6,7 @@ from flask_migrate import Migrate
 from app.models import Reservation, db
 from app.reservation_form import ReservationForm
 from datetime import datetime
+import pytz
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -16,15 +17,19 @@ db.init_app(app)
 migrate = Migrate(app, db)
 
 
-# problem: the "today" value is the local time, but in my database I stored dates in UTC.
-# I need to convert my stored UTC times to local 
 @app.route('/reservation')
 def get_all():
-    today = datetime.now()
-    # Note: I confirmed datetime.now() was showing my local time, so no need to convert it to local
+    # wrong because local time or not correct format
+    #today = datetime.now()
+    # utcToday = datetime.utcnow()
+
+    # correct format
+    now_utc = datetime.now(tz=pytz.utc)
+    utcToday = now_utc.strftime('%Y-%m-%dT%H:%M:%SZ')
+
     reservations = Reservation.query.filter(
         Reservation.startTime
-        > today
+        >  utcToday
     ).all()
     # Note: I chose to return the dictionary with the key of Reservations to the list of all reservations
     # The status code build in returns 200 for the success of the 'GET' route

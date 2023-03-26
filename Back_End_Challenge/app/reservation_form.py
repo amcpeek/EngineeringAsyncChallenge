@@ -3,22 +3,24 @@ from wtforms import StringField
 from wtforms.validators import DataRequired, ValidationError
 from datetime import datetime
 from app.models import Reservation
+import pytz
 
 
-# need to convert the start and ends times to local time
+# need to convert startTime to same format as now_utc
 def valid_startTime(form, field):
     startTime = datetime.strptime(field.data, "%Y-%m-%dT%H:%M:%SZ")
-    current = datetime.now()
-    # datetime.now() is automatically local time
-    if startTime < current:
+    startTime_utc = pytz.utc.localize(startTime) # add timezone information
+    now_utc = datetime.now(tz=pytz.utc)
+    if startTime_utc < now_utc:
         raise ValidationError('Start time can not be in the past for local time.')
 
 
 # validation the endTime is after the current time was not in the instructions, but I added it
 def valid_endTime(form, field):
     endTime = datetime.strptime(field.data, "%Y-%m-%dT%H:%M:%SZ")
-    current = datetime.now()
-    if endTime < current:
+    endTime_utc = pytz.utc.localize(endTime) 
+    now_utc = datetime.now(tz=pytz.utc)
+    if endTime_utc < now_utc:
         raise ValidationError('End time can not be in the past for local time.')
 
 
