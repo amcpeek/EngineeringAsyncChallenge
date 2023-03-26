@@ -59,21 +59,21 @@ class ReservationForm(FlaskForm):
                 print('compareUser', compareUser, 'self.user', self.user.data)
                 # I decided to give very clear feedback to the user for them to try a better reservation time
                 if compareUser == self.user.data:
-                    if startTime <= compareStartTime and endTime >= compareEndTime:
+                    if startTime == compareStartTime and endTime == compareEndTime:
                         self.endTime.errors.append(
-                            'This user already has an event completely overlapping with the specified time block')
+                            f'''This user already has an event with that exact time block new: {startTime} == cur: {compareStartTime} and new: {endTime}  == cur: {compareEndTime} ''')
                         return False
-                    if startTime > compareStartTime and endTime < compareEndTime:
+                    if startTime < compareStartTime and endTime > compareEndTime:
                         self.endTime.errors.append(
-                            'This user already has an event that starts before and continues to after this time block')
+                            f'''This user already has an event that starts before and continues to after this time block new: {startTime}  < cur: {compareStartTime} and new: {endTime}  > cur: {compareEndTime} ''')
                         return False
                     if startTime <= compareStartTime and endTime > compareStartTime:
                         self.endTime.errors.append(
-                            'This user already has an event overlapping with the start time, but not the end time')
+                            f'''This user already has an event overlapping with the start time, but not the end time new: {startTime}  <= cur: {compareStartTime} and new: {endTime}  > cur: {compareStartTime} ''')
                         return False
-                    if endTime >= compareEndTime and startTime > compareEndTime:
+                    if endTime >= compareEndTime and startTime < compareEndTime:
                         self.endTime.errors.append(
-                            'This user already has an event overlapping with the end time, but not the start time')
+                            f'''This user already has an event overlapping with the end time, but not the start time  new: {endTime}  >= cur: {compareEndTime} and new: {startTime}  < cur: {compareEndTime} ''')
                         return False
 
             return True

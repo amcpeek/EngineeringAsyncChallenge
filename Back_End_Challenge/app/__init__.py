@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, jsonify
+from flask import Flask
 from .config import Config
 from flask_migrate import Migrate
 from app.models import Reservation, db
@@ -10,11 +10,14 @@ from datetime import datetime
 app = Flask(__name__)
 app.config.from_object(Config)
 app.config['WTF_CSRF_ENABLED'] = False
-# Note: I disabled CSRF because after reaching out to Steven, I decided to focus the scope on just having the two routes work below without CSRF
+# Note: I disabled CSRF because after reaching out to Steven
+# I decided to focus the scope on just having the two routes work below without CSRF
 db.init_app(app)
 migrate = Migrate(app, db)
 
 
+# problem: the "today" value is the local time, but in my database I stored dates in UTC.
+# I need to convert my stored UTC times to local 
 @app.route('/reservation')
 def get_all():
     today = datetime.now()
