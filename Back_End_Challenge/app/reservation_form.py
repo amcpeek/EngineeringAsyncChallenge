@@ -18,7 +18,7 @@ def valid_startTime(form, field):
 # validation the endTime is after the current time was not in the instructions, but I added it
 def valid_endTime(form, field):
     endTime = datetime.strptime(field.data, "%Y-%m-%dT%H:%M:%SZ")
-    endTime_utc = pytz.utc.localize(endTime) 
+    endTime_utc = pytz.utc.localize(endTime)
     now_utc = datetime.now(tz=pytz.utc)
     if endTime_utc < now_utc:
         raise ValidationError('End time can not be in the past for local time.')
@@ -42,7 +42,7 @@ class ReservationForm(FlaskForm):
                 self.startTime.data, "%Y-%m-%dT%H:%M:%SZ")
             endTime = datetime.strptime(
                 self.endTime.data, "%Y-%m-%dT%H:%M:%SZ")
-            if startTime >= endTime:
+            if startTime > endTime:
                 self.endTime.errors.append(
                     'End time must be after the start time.')
                 return False

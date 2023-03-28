@@ -4,7 +4,7 @@
 
 ## Install the following:
 
-- Flask python-dotenv Flask-WTF wtforms SQLAlchemy Flask-SQLAlchemy alembic Flask-Migrate
+- Flask python-dotenv Flask-WTF wtforms SQLAlchemy Flask-SQLAlchemy alembic Flask-Migrate pytz
 - They are listed in the Pipefile
 - In the terminal to install all of them, write:
 - pipenv install
